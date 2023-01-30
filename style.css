@@ -2,13 +2,27 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.swiper {
+  max-width: 900px;
+}
+
+.tweets {
+  padding: 0 10px;
+  margin-top: 50px;
+}
+
 .tweets_container {
   position: relative;
 }
 
 .tweets_wrapper {
+  padding: 0 70px;
   margin: auto;
-  width: calc(100% - 2*70px);
+  height: 210px;
+}
+
+.tweets_swiper {
+  height: 100%;
 }
 
 .tweets_item {
@@ -16,25 +30,32 @@ body {
   background: #EAF5FF;
   border-left: 10px solid #1D9BF0;
   box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.07);
-  padding: 10px;
+  height: 100%;
+  max-width: 700px;
+  margin: auto;
 }
 
 .tweets_item_logo {
   background: #A95774;
   display: block;
-  width: 51px;
+  min-width: 51px;
   height: 51px;
   border-radius: 50%;
   margin-right: 10px;
+  margin: 10px 0 0 10px;
 }
 
 .tweets_item_main {
   width: 100%;
+  padding: 10px 10px 10px 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tweets_item_main_header {
   display: flex;
   width: 100%;
+  align-items: center;
 }
 
 .tweets_item_main_header_name {
@@ -96,14 +117,16 @@ body {
 
 .tweets_item_main_text {
   font-weight: 500;
-  font-size: 32px;
+  font-size: 18px;
   line-height: 140%;
   color: #131313;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .tweets_item_main_footer {
   display: flex;
+  margin: auto 0 0 0;
 }
 
 .tweets_item_main_footer_btn {
@@ -138,4 +161,17 @@ body {
   background: #F5F5F5;
   border: 1px solid #DFDFDF;
   border-radius: 20px;
+  z-index: 999;
+}
+
+.tweets_nav_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tweets_nav_right {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
