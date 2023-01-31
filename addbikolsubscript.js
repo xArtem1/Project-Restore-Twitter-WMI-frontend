@@ -37,7 +37,7 @@
         if (currentAddButton == null){
             var newElement = document.createElement("div");
             newElement.className = "add_button";
-            newElement.innerText = "Dodaj";
+            newElement.innerText = "+ Dodaj";
             topBar.appendChild(newElement);
         }
     };
