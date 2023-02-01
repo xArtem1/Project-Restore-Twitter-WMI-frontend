@@ -14,7 +14,7 @@
 // @resource    bootstrapCSS https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
 // @resource    githubButtonIconSet https://raw.githubusercontent.com/necolas/css3-github-buttons/master/gh-icons.png
 // @resource   IMPORTED_CSS_LIB https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css
-// @resource   IMPORTED_CSS https://qdenya.com/luba/style.css?8
+// @resource   IMPORTED_CSS https://qdenya.com/luba/style.css?10
 // @grant      GM_getResourceText
 // @grant      GM_addStyle
 
@@ -23,8 +23,10 @@
 
 (function() {
     'use strict';
+    GM_addStyle(GM_getResourceText("IMPORTED_CSS"));
     var run = function(){
         var tweets = document.querySelectorAll(".css-1dbjc4n.r-1loqt21.r-18u37iz.r-1ny4l3l.r-1udh08x.r-1qhn6m8.r-i023vh.r-o7ynqc.r-6416eg");
+        //.css-1dbjc4n.r-1joea0r dla more
         for (let i = 0; i < tweets.length; i++){
             addButton(tweets[i])
         }
@@ -35,7 +37,7 @@
         var topBar = tweet.querySelector(".css-1dbjc4n.r-k4xj1c.r-18u37iz.r-1wtj0ep");
         var currentAddButton = tweet.querySelector(".add_button");
         if (currentAddButton == null){
-            var newElement = document.createElement("div");
+            var newElement = document.createElement("button");
             newElement.className = "add_button";
             newElement.innerText = "+ Dodaj";
             topBar.appendChild(newElement);
