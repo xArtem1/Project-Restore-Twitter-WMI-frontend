@@ -175,3 +175,22 @@ body {
   top: 0;
   right: 0;
 }
+.add_button {
+  position: static;
+  width: 67px;
+  height: 27px;
+  left: calc(50% - 67px/2 + 1.5px);
+  top: calc(50% - 27px/2 + 5px);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #1D9BF0;
+  border: none;
+  display: none;
+}
+
+.more_button {
+  margin: 0 26px 0 auto;
+}
